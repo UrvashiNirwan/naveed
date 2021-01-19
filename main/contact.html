@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="simplelightbox-master/dist/simple-lightbox.css">
+    <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <scripttype="text/javascript">
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <title>Photography website </title>
+</head>
+<body>
+
+    <!--header-->
+    <header class="header">
+        <div class="nav-section">
+            <div class="brand-and-navBtn">
+                 <span class="brand-name">
+                    NAVEED SHAIKH
+                 </span>
+                 <span class="navBtn flex">
+                    <i class="fas fa-bars"></i>
+                 </span>
+            </div>
+
+            <!--navigation menu-->
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="gallery.html" >Gallery</a></li>
+                    <li><a href="vlog.html">Vlog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <span class="search-icon">
+                <i class="fas fa-search"></i>
+            </span>
+        </div>
+
+        <div class="container about">
+            <div class="about-content">
+                <div class="about-img flex">
+                    <img src="images/dslr.jpeg" alt="photographer img">
+                </div>
+                <h2> I'm Naveed Shaikh</h2>
+                <h3>VLOG | TRAVEL | FOOD | PHOTOGRAPHY </h3>
+                <blockquote>
+                    "Photography is a way of feeling, of touching, of loving.<br> What you have caught on film is captured forever .....<br> It remembers little things, long after you have forgotten everything."
+                <span> -Aaron Siskind</span>
+                </blockquote>
+            </div>
+
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbVRES0ZtenpXV1FyS21XN3VXWFFVWkotMkJQQXxBQ3Jtc0trRGdnZW5OcDlzZnRsbnJ0OGw4M01mYldEYlJJRmJoelJIcG9VV2owVE5oX2VlOFlmamRseThfQTc4YTdiVG1fRmk3VE1YbXhCYVZ5SjFrcUZDcGJkTU1nNEhsSlJyLWdYSFlTUFY5dTU3T0VPWWNuSQ&q=https%3A%2F%2Fwww.facebook.com%2Fnaveed.shaikh.7399786"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/nedshaikh001?igshid=13ucnyehklk3j"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCHFwJoXfTNstQt2QRlYrddA"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/iamned001?s=08"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nssaudi49@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--end of header-->
+
+     <!--main-->
+     <section class="section-five">
+     <div class="container">
+        <div class="contact-top">
+            <h3>CONTACT ME</h3>
+            <p> Lorem, ipsum dolor sit amet consectetur 
+             adipisicing elit. conseuatur, nobis.</p>
+       </div>
+       
+       <div class="contact-middle">
+            <div>
+                <span class="contact-icon">
+                 <i class="fas fa-map-signs"></i>
+                </span>
+                <span>Address</span>
+                <p><a href="https://goo.gl/maps/6Jg5bJW5Yo6ooyvH7">Mumbai, India</a></p>
+            </div>
+
+            <div>
+                <span class="contact-icon">
+                 <i class="fas fa-phone"></i>
+                </span>
+                <span>Contact Number</span>
+                <a class="phone" href="tel:8169038120"><p>8169038120</p></a>
+            </div>
+
+            <div>
+                <span class="contact-icon">
+                 <i class="fas fa-paper-plane"></i>
+                </span>
+                <span>Email Address</span>
+                <p><a href="mailto:nssaudi49@gmail.com">nssaudi49@gmail.com</a></p>
+            </div>
+            
+            <div>
+                <span class="contact-icon">
+                 <i class="fas fa-globe"></i>
+                </span>
+                <span>Website</span>
+                <p>www.nedshaikh.com</p>
+            </div>
+       </div>
+    </div>
+    
+       <div class="contaniner">
+           <div class="form_container">
+            <div class="heading">
+                <h2>Contact us</h2>
+            </div>
+
+            
+            <div class="login-box">
+                <h1>CONTACT US</h1>
+                    <div class="textbox">
+                       <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="" value="" placeholder="Name" required="required">
+                    </div>
+                
+                    <div class="textbox">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <input type="email" name="" value="" placeholder="Email" required="required>
+                    </div>
+
+                    <div class="textbox">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    <input type="tel" name="" value="" placeholder="Phone no.">
+                    </div>
+
+                    <div class="textbox">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                    <input type="text" name="" value="" placeholder="Message">
+                    </div>
+                
+                <input class="btn" type="button" name="" value="Submit" placeholder="">
+                  
+                    
+                </div>
+                
+                <!--<form>
+                <div class="input_box">
+                   <span class="icon"><i class="fa fa-user"></i></span>
+                   <input type="text" name="" placeholder="Name" required="required">
+                </div>
+
+                <div class="input_box">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" name="" placeholder="Email" required="required">
+                 </div>
+
+                 <div class="input_box">
+                    <span class="icon"><i class="fa fa-phone"></i></span>
+                    <input type="tel" name="" placeholder="phone no." required="required">
+                 </div>
+
+                 <div class="input_box">
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <textarea rows="5" type="text" placeholder="Message" required="required"></textarea>
+                 </div>
+                 
+                 <div class="submit">
+                    <button type="submit">SUBMIT</button>
+                 </div>
+
+
+            </form>-->
+           </div>
+
+       </div>    
+
+        
+        
+     
+        
+    <!--end of main-->
+
+    <!--footer-->
+        <footer class="footer">
+            <footer class="footer-container container">
+                <div>
+                    <h2>NAVEED SHAIKH</h2>
+                    <p>A life is born..a life is gone...<br> its just a play...so do come along.<br>I invite you to make me a part 
+                        of your journey and make this world a happy and joyful place to live in. Furthermore, let me know if anyone wants a website as <a href="https://www.instagram.com/_minirwan_photography/"><span>Urvashi Nirwan</span></a>, a Website Designer and Photographer is working towards a good cause and helping people to make their online presence more significant. </p>
+                </div>
+                <div>
+                   <!-- <div class="container about">
+                        <div class="about-content">
+                            <div class="about-img flex">
+                                <img src="images/1.jpg" alt="Website designer img">
+                            </div>
+                            </div>
+                            </div>-->
+                     <h3>Let's start an awesome project now!</h3>
+                    <p>Don't Know Where to start from....<br>Come lets discuss.<br>
+                        Hey!..My name is <span>Urvashi Nirwan</span>,<br> a <span>WEBSITE DESIGNER</span> <br>and an enthusiast Photographer.<br>
+                        Lets make something great together.<br> Because I empower people like you to create<br> your online presence for free and the way you want it ..</p>
+                    
+                    <div class="icons">
+                        <ul>
+                        <li><a href="https://www.instagram.com/_minirwan_photography/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="mailto:urvashinirwan6@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div>
+                    <p>&copy;Copyright NEDSHAIKH. static website</p>
+                </div>
+            </footer>
+        </footer>
+    <!--end of footer-->
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+We Believe Great Designs
+Make Great Business
+Professional creativity clean featured website templates for your business. Let's start an awesome project now.
+Don't Know Where to start from
+Join Us
+Lets make something great together
+We empower the people like you to create your online presence for free and exactly the way you want it .
+I believe in passionate people . No matter hoe their background and years of experience.
+.contact-top{
+    text-align: center;
+}
+.contact-top h3{
+    font-size: 28px;
+}
+.contact-top p{
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+}
+.contact-middle div{
+    text-align: center;
+    padding: 25px 0;
+    background: var(--dark);
+    color: #fff;
+}
+.contact-middle div a
+{
+    color: #fff;
+    text-decoration: none;
+}
+.contact-middle div span
+{
+    display: block;
+}
+.contact-icon
+{
+    font-size: 30px;
+}
+.contact-middle div span:nth-child(2)
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+.contact-middle div p
+{
+    font-weight: 300;
+    opacity: 0.7;
+}
+.contact-bottom
+{
+    margin-top: 50px!important;
+    background-color: #000000;
+}
+.contact-bottom .form
+{
+    padding: 0 20px;
+}-->
+ <!--<div class="contact-bottom">   
+            </div>
+            <section class="section-one">
+                <div class="container">
+                    <div class="sec-one-left">
+                        <form class="form">
+                            <input type="text" placeholder="Your Name">
+                            <input type="email" placeholder="Your Email">
+                            <input type="text" placeholder="Subject">
+                            <textarea rows="" placeholder="Message">
+                            </textarea>
+                            <input type="submit" class="btn" value="Send Message">
+                          </form> 
+                    </div>  
+                    </div>
+                </section>
+            
+            
+            .contaniner
+{
+    width: 100%;
+    height:100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5)),(rgba(56, 53, 53, 0.5));
+    background-size: cover;
+    background-position: center;
+}
+.contaniner .form_container
+{
+    padding: 150px 350px 100px 350px;
+    background-image: linear-gradient(45deg, rgb(29, 28, 24), #000);
+    border-radius:10px ;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+.contaniner .form_container .heading h2
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-top:-80px;
+    font-weight: 300;
+    color: #fff;
+}
+.contaniner .form_container .input_box
+{
+    width:100%;
+    background: transparent;
+    border: 2px solid rgb(219, 219, 219);
+    color:#fff;
+    margin-bottom: 20px;
+    font-size: 13px;
+    padding: 4px 0px 4px 25px;
+    height: 33px;
+    transition: 0.8s all;
+    border: none;
+}
+.contaniner .form_container .input_box textarea
+{
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(219, 219, 219);
+    color: #fff;
+    margin-bottom: 20px;
+     font-size: 13px;
+    padding: 4px 0px 4px 25px;
+    transition: 0.8s all;
+}
+.contaniner .form_container .input_box:focus,
+.contaniner .form_container .input_box textarea:focus
+{
+    outline: none;
+    border-color: #fff;
+}
+.contaniner .form_container .input_box .icon
+{
+    height: 33px;
+    color: #fff;
+    line-height: 33px;
+    margin-bottom: 50px;
+}
+.contaniner .form_container.submit
+{
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto;
+    text-align: right;
+}-->
+
+
+
+
+
+
+
+
+
+
